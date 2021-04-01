@@ -9,6 +9,7 @@ let btn8 = 0;
 let btn9 = 0;
 let player1 = document.getElementById('player1btn');
 let player2 = document.getElementById('player2btn');
+let dark = 0;
 
 function flip() {
     let x = Math.random()
@@ -25,6 +26,7 @@ function flip() {
 }
 
 function darkmode(){
+    if(dark == 0){
     document.body.style.backgroundColor = "#000000";
     document.getElementById("idh1").style.color = "#f5f0ff";
     document.getElementById("idh2").style.color = "#f5f0ff";
@@ -35,6 +37,21 @@ function darkmode(){
     document.getElementById("li2").style.color = "#f5f0ff"; //hated to this LOL
     document.getElementById("li3").style.color = "#f5f0ff";
     document.getElementById("turncall").style.color = "#f5f0ff";
+    dark = 1;
+    } else if (dark == 1) {
+    document.body.style.backgroundColor = "white";
+    document.getElementById("idh1").style.color = "black";
+    document.getElementById("idh2").style.color = "black";
+    document.getElementById("idp").style.color = "black";
+    document.getElementById("pwhite").style.color = "white";
+    document.getElementById("gridid").style.border = "1px solid rgba(0, 0, 0, 0.8";
+    document.getElementById("li1").style.color = "black";
+    document.getElementById("li2").style.color = "black"; //hated to this LOL
+    document.getElementById("li3").style.color = "black";
+    document.getElementById("turncall").style.color = "black";
+    dark = 0;
+
+    }
     //can't revert it
 
 }

@@ -15,13 +15,22 @@ let minus = "-";
 let multi = "*";
 let divi = "/";
 let operator = 0;
+let dark = 0;
 
-function darkmode(){
-
-document.body.style.backgroundColor = "#000000";
-document.getElementById("li1").style.color = "#f5f0ff";
-document.getElementById("li2").style.color = "#f5f0ff"; //hated to this LOL
-document.getElementById("li3").style.color = "#f5f0ff";
+function darkmode() {
+    if (dark == 0){
+        document.body.style.backgroundColor = "#000000";
+    document.getElementById("li1").style.color = "#f5f0ff";
+    document.getElementById("li2").style.color = "#f5f0ff"; //hated to this LOL
+    document.getElementById("li3").style.color = "#f5f0ff";
+    dark = 1;
+    } else if (dark == 1) {
+    document.body.style.backgroundColor = "white";
+    document.getElementById("li1").style.color = "white";
+    document.getElementById("li2").style.color = "white"; //hated to this LOL
+    document.getElementById("li3").style.color = "white";
+    dark = 0;
+    }
 
 }
 
@@ -105,15 +114,15 @@ function btnDotShow() {
     document.getElementById('display').innerHTML = display.join('');
 }
 
-function clearDis(){
+function clearDis() {
     display.pop();
     document.getElementById('display').innerHTML = display.join('');
 }
 
-function clearAll(){
-    while (display.length > 0){
+function clearAll() {
+    while (display.length > 0) {
         display.pop();
-    } 
+    }
 
     document.getElementById('display').innerHTML = 0;
 
@@ -166,7 +175,7 @@ function solve() {
         display = display.toString();
         display = display.split('');
 
-    } else if (operator == 4){
+    } else if (operator == 4) {
         display = display.toString();
         display.split('*');
         display = display.replace(/\,/g, "");
@@ -178,7 +187,7 @@ function solve() {
         display = display.toString();
         display = display.split('');
 
-    } 
+    }
 
     // console.log(display[0], display[1]);
     console.log(typeof display, display);

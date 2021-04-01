@@ -4,6 +4,8 @@
     grid-template-rows: 25px 25px 25px 25px 25px;
     grid-template-columns: 25px 25px 25px 25px 25px;
     padding-left: 7px;
+
+
 }
 
 #bodycalc{
@@ -13,12 +15,17 @@
     padding: 20px;
     width: 135px;
     height: 145px;
+
+    
 }
 
 #display{
     border: 1px solid black;
     width: 145px;
     height: 17px;
+    text-align: center;
+    align-content: center;
+    
 }
 
 ul{
